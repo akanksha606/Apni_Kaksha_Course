@@ -1,0 +1,1 @@
+{"name":"Local: recordBreaker","url":"c:\\Users\\akank\\Desktop\\Apna college\\recordBreaker.cpp","tests":[{"id":1620750484001,"input":"1\n8\n1 2 0 7 2 0 2 2","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\akank\\Desktop\\Apna college\\recordBreaker.cpp","group":"local","local":true}

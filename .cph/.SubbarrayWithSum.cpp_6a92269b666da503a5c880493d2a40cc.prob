@@ -1,0 +1,1 @@
+{"name":"Local: SubbarrayWithSum","url":"c:\\Users\\akank\\Desktop\\Apna college\\SubbarrayWithSum.cpp","tests":[{"id":1620838741468,"input":"5 12\n1 2 3 7 5","output":"2 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\akank\\Desktop\\Apna college\\SubbarrayWithSum.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: pairSum","url":"c:\\Users\\akank\\Desktop\\Apna college\\pairSum.cpp","tests":[{"id":1620850561183,"input":"8 31\n2 4 7 11 14 16 20 21","output":"yes"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\akank\\Desktop\\Apna college\\pairSum.cpp","group":"local","local":true}
