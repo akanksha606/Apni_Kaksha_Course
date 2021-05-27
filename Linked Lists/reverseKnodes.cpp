@@ -31,57 +31,35 @@ void display( node *head){ //display the complete linked list
     }
     cout<<"NULL"<<endl;
 }
-void insertAtHead( node* &head, int val){ // insert value in the beginning(head)
-    node *n= new node(val);
-    n->next=head;
-    head=n;
-}
-
-bool search(node *head, int key){ // search a key in linked list
-    node *ptr= head;
-    while(ptr!=NULL){
-        if(ptr->data==key)
-        return true;
-
-        ptr=ptr->next;
-    }
-    return false;
-}
-node* reverse(node *&head){ //reverse a linked list by iteration
-    node * prev=NULL;
+node * reverseK( node *&head, int k){ // reverse k node
+        node * prev=NULL;
     node *curr=head;
     node *nextPtr;
-    while(curr!=NULL){
+    int count=0;
+    while(curr!=NULL && count<k){
         nextPtr=curr->next;
         curr->next=prev;
         prev=curr;
         curr=nextPtr;
-   }
-   return prev;
+        count++;
+    }
+    if(nextPtr!=NULL)
+    head->next=reverseK(nextPtr,k);
+
+    return prev;
 }
-
-node* reverseByRecursion( node *&head){ //reverse a linked list by recursion
-
-        if(head==NULL || head->next==NULL)
-        return head;
-      node *newHead=reverseByRecursion(head->next);
-      head->next->next=head;
-      head->next=NULL;
-
-      return newHead;
-}
-
 
 int main(){
     node *head=NULL;
     insertAtTail(head,1);
     insertAtTail(head,2);
     insertAtTail(head,3);
-    insertAtHead(head, 4);
+    insertAtTail(head,4);
+    insertAtTail(head,5);
+    insertAtTail(head,6);
     display(head);
-    node* newHead=reverseByRecursion(head);
+    int k=2;
+    node* newHead=reverseK(head, k);
     display(newHead);
-    
     return 0;
 }
-

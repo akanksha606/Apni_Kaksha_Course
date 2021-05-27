@@ -23,7 +23,7 @@ void insertAtTail(node * &head, int val){ //insert value at the end
     }
     ptr->next=n;
 }
-void deletion(node *head, int val){ // not for head
+void deletion(node *&head, int val){ // not for head
     node *ptr=head;
     while((ptr->next)->data!=val){
         ptr=ptr->next;
@@ -41,7 +41,9 @@ void display( node *head){ //display the complete linked list
     cout<<"NULL"<<endl;
 }
 
-void deleteAtHead( node * head){ // delete head node
+void deleteAtHead( node *&head){ // delete head node
+    if (head==NULL)
+    return;
     node* todelete=head;
     head=head->next;
     delete todelete;
@@ -51,7 +53,7 @@ int main(){
     insertAtTail(head,1);
     insertAtTail(head,2);
     insertAtTail(head,3);
-    deletion(head, 2);
+    deletion(head,2);
     display(head);
     return 0;
 }
