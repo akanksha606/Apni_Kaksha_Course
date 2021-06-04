@@ -39,8 +39,8 @@ void display( node *head){ //display the complete linked list
 
 int listlength(node *head){
      node *temp=head;
-     int s=1;
-     while(temp->next!=NULL){
+     int s=0;
+     while(temp!=NULL){
          s++;
          temp=temp->next;
      }
